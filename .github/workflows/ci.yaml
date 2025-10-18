@@ -53,3 +53,11 @@ jobs:
                   files: dist_keycloak/keycloak-theme-*.jar
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            - name: trigger Job with parameter
+              uses: appleboy/jenkins-action@v1.1.1
+              with:
+                  url: http://ci.comp.ystv.co.uk
+                  user: example
+                  token: ${{ secrets.JENKINS_TOKEN }}
+                  job: keycloak-theme
+                  parameters: RELEASE=${{ needs.check_if_version_upgraded.outputs.to_version }}
