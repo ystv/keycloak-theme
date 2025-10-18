@@ -56,7 +56,7 @@ pipeline {
       steps {
         build job: 'Deploy Nomad Job', parameters: [
           string(name: 'JOB_FILE', value: 'keycloak-prod.nomad'),
-          text(name: 'TAG_REPLACEMENTS', value: "registry.comp.ystv.co.uk/ystv/internal-site:${imageTag}")
+          text(name: 'TAG_REPLACEMENTS', value: "registry.comp.ystv.co.uk/ystv/keycloak:${imageTag}")
         ], wait: true
       }
     }
