@@ -1,7 +1,7 @@
 {
     "name": "keycloakify-starter",
-    "version": "0.0.0",
-    "description": "Starter for Keycloakify 11",
+    "version": "0.0.1",
+    "description": "YSTV Keycloak Theme",
     "repository": {
         "type": "git",
         "url": "git://github.com/codegouvfr/keycloakify-starter.git"
