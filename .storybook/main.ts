@@ -7,6 +7,10 @@ const config: StorybookConfig = {
         name: "@storybook/react-vite",
         options: {}
     },
-    staticDirs: ["../public"]
+    staticDirs: ["../public"],
+    viteFinal: config => {
+        config.base = "/keycloak-theme/";
+        return config;
+    }
 };
 export default config;

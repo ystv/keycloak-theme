@@ -56,6 +56,8 @@ jspm_packages
 /build
 /storybook-static
 
+/dist_storybook
+
 # build output of `jsx-email`
 /.rendered
 
