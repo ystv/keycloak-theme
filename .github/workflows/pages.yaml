@@ -12,6 +12,10 @@ jobs:
       - uses: actions/setup-node@v4
       - uses: bahmutov/npm-install@v1
       - run: npm run build-storybook
+      - name: Add CNAME for deployment
+        run: |
+          touch dist_storybook/CNAME
+          echo "keycloak-theme.dev.ystv.co.uk" >> dist_storybook/CNAME
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
         with:
